@@ -3,11 +3,22 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import '../node_modules/bootstrap/dist/js/bootstrap.bundle';
+import '../node_modules/jquery/dist/jquery'
+import '../node_modules/bootstrap/dist/css/bootstrap.css';
+import '../node_modules/bootstrap-icons/font/bootstrap-icons.css';
+import { ShopperIndex } from './components/shopper index/shopper-index';
+import { CookiesProvider } from 'react-cookie';
+import { InvoiceGenerator } from './invoice-generator/invoice-generator';
+import { ContextDemo } from './components/context-demo/context-demo';
+import { ReducerDemo } from './components/usereducer/reducer-demo';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <CookiesProvider>
+      <ShopperIndex />
+    </CookiesProvider>
   </React.StrictMode>
 );
 
